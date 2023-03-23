@@ -2,7 +2,7 @@
 
 ## Description
 
-
+The internet has granted us many different uses and functions since its inception with one of which being the abilitiy to interact with each from opposite ends of the globe. This project was created to allow users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
 ## Table of Contents
 
@@ -18,11 +18,11 @@ Before running this application you need to install the required dependecies lis
 
 ## Usage  
 
-The link below provides a full walkthrough video of how to run the application.
-
-https://github.com/kennedyisn/Module-13-ECommerce-site-backend
+Simply click the heroku link of the deployed application and you will be taken to the social network!
 
 ## Credits
+
+https://www.tutorialspoint.com/mongodb/index.htm
 
 ## License
 
