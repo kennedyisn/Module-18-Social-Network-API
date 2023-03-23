@@ -22,13 +22,13 @@ module.exports = {
         Thought.create(
             req.body
         )
-        .then({_id}) => {
+        .then(({_id}) => {
             return User.findOneAndUpdate(
                 {_id: req.params.userId},
                 {$push: {thoughts: _id}},
                 {new: true}
             );
-        }
+        })
         .then((thoughtData) => res.json(thoughtData))
         .catch((err) => res.status(400).json(err));
     },
