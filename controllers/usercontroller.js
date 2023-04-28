@@ -13,6 +13,8 @@ module.exports = {
         User.findOne(
             {_id: req.params.id}
         )
+        .populate("friends")
+        .populate("thoughts")
         .then((userData) => res.json(userData))
         .catch((err) => res.status(400).json(err));
     },

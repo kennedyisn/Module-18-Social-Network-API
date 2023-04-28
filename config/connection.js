@@ -1,21 +1,15 @@
 const { connect, connection } = require('mongoose');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+dotenv.config();
 
-// Connect to MongoDB
-connect(process.env.MONGODB_URI || 'mongodb://localhost/social-network-api', {
-    useFindAndModify: false,
+mongoose.set('strictQuery', true);
+
+const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/socialnet';
+
+connect(connectionString, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
 
-// Log Mongo connection established
-connection.on('connected', () => {
-    console.log('Mongoose connected successfully.');
-});
-
-// Error message if connection not estaablished
-connection.on('error', err => {
-    console.log('Mongoose connection error: ', err);
-});
-
-// Export connection
 module.exports = connection;
